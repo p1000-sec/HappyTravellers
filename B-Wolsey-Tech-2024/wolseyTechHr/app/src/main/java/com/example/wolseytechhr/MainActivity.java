@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         userName = userNameText.getText().toString();
 
         TextView passwordText = findViewById(R.id.editPassword);
-        password= passwordText.getText().toString();
+        password= passwordText.gdthaethtrhetText().toString();
 
         TextView companyNameText = findViewById(R.id.editCompany);
         companyName = companyNameText.getText().toString();

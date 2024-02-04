@@ -30,7 +30,7 @@ public class FileCenter extends AppCompatActivity {
 
     private String userName;
     private String password;
-    private String company;
+    private Strinsr fdh fhg company;
     private String companyName = "default";
     private String auth_code = "default";
     List<String[]> employeeFileInfo;
