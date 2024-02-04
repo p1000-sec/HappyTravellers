@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPage">
+    <!-- Top part of page starts here -->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="108dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wolseylogo" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="24dp"
+        android:text="Tracking System"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="82dp"
+        android:background="#6AA0EF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="82dp"
+        android:onClick="openProfile"
+        android:text="Profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="82dp"
+        android:onClick="openFileCenter"
+        android:text="File Center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="82dp"
+        android:onClick="openTimeSheet"
+        android:text="Time Sheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="30dp"
+        android:onClick="logout"
+        android:text="Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <TextView
+        android:id="@+id/noInternetDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="52dp"
+        android:text="No Internet Connection"
+        android:textColor="#E60505"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- Top part of page ends here -->
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="102dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="File Center"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="412dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="179dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:text="Daily"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+
+
+
+    <TableLayout
+        android:id="@+id/dailyTable"
+        android:layout_width="377dp"
+        android:layout_height="84dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="234dp"
+        android:stretchColumns="0,2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--
+        <TableRow>
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:padding="3dip"
+                android:text="Blank JSA" />
+
+            <TextView
+                android:layout_width="140dp"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Wolsey, Dave" />
+
+            <TextView
+                android:layout_marginEnd="25dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="2020-06-16" />
+        </TableRow>
+
+
+        <TableRow>
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:padding="3dip"
+                android:text="Near Miss" />
+
+            <TextView
+                android:layout_width="140dp"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Wolsey, Dave" />
+
+            <TextView
+                android:layout_marginEnd="25dp"
+                android:gravity="right"
+                android:padding="3dip"
+                android:text="2019-11-25" />
+        </TableRow>
+        -->
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/weeklyTable"
+        android:layout_width="377dp"
+        android:layout_height="84dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="348dp"
+        android:stretchColumns="0,2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--
+        <TableRow>
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:padding="3dip"
+                android:text="Fire and Explosion Plan" />
+
+            <TextView
+                android:layout_width="153dp"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Wolsey, Dave" />
+
+            <TextView
+                android:layout_marginEnd="25dp"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="2020-05-09" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:padding="3dip"
+                android:text="Fire and Explosion Plan" />
+
+            <TextView
+                android:layout_width="153dp"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="Wolsey, Dave" />
+
+            <TextView
+                android:layout_marginEnd="25dp"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="2020-05-09" />
+        </TableRow>
+        -->
+
+    </TableLayout>
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="319dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:text="Weekly"
+            android:textSize="16dp" />" />
+    </LinearLayout>
+
+
+    <!-- Top part of page ends here -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
